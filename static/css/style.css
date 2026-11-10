@@ -1,0 +1,14 @@
+:root { --ink: #172b4d; --muted: #68778d; --blue: #2457c5; --line: #e7edf5; }
+body { background: #f5f7fb; color: var(--ink); min-height: 100vh; }
+.app-nav { background: #142b4a; }
+.app-nav .navbar-brand { letter-spacing: .2px; }
+.app-card, .stat-card, .notice-card { border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 5px 22px rgba(20,43,74,.04); background: #fff; }
+.stat-card, .notice-card { padding: 22px; height: 100%; }
+.notice-card { background: #eef4ff; color: #24416f; }
+.eyebrow { color: var(--blue); font-size: .72rem; font-weight: 700; letter-spacing: .12em; }
+.form-control { border-color: #dce4ef; padding: .7rem .8rem; }
+.form-control:focus { border-color: #7ca0ed; box-shadow: 0 0 0 .2rem rgba(36,87,197,.12); }
+.btn-primary { background: var(--blue); border-color: var(--blue); }
+.table thead th { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; }
+.remarks-cell { min-width: 260px; max-width: 360px; font-size: .88rem; color: #53647c; }
+footer { margin-top: 30px; }

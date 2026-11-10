@@ -1,0 +1,10 @@
+<div class="mb-3"><label class="form-label" for="full_name">Full name</label><input class="form-control" id="full_name" name="full_name" maxlength="100" required value="{{ data.get('full_name', '') }}"></div>
+<div class="mb-3"><label class="form-label" for="date_of_birth">Date of birth (DD/MM/YYYY)</label><input class="form-control" id="date_of_birth" name="date_of_birth" placeholder="28/01/1960" required value="{{ data.get('date_of_birth', '') }}"><div class="form-text">The supplied task data uses DD.MM.YYYY; both separators are accepted.</div></div>
+<div class="mb-3"><label class="form-label" for="email">Email address</label><input class="form-control" type="text" id="email" name="email" required value="{{ data.get('email', '') }}"></div>
+<div class="row">
+  {% for field, label in [('glucose','Glucose'),('haemoglobin','Haemoglobin'),('cholesterol','Cholesterol')] %}
+  <div class="col-md-4 mb-3"><label class="form-label" for="{{ field }}">{{ label }}</label><input class="form-control" type="number" min="0" step="any" id="{{ field }}" name="{{ field }}" required value="{{ data.get(field, '') }}"></div>
+  {% endfor %}
+</div>
+<button class="btn btn-primary" type="submit">{{ button_label }}</button>
+<a class="btn btn-outline-secondary ms-2" href="{{ url_for('patient_list') }}">Cancel</a>

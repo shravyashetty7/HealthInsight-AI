@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Add patient | HealthInsight{% endblock %}
+{% block content %}
+<div class="mb-4"><p class="eyebrow mb-1">PATIENT MANAGEMENT</p><h1 class="h3">Add patient</h1><p class="text-secondary">Enter patient details and blood test values.</p></div>
+<div class="card app-card"><div class="card-body p-4">
+<form method="post" novalidate>
+  {% set button_label = "Save patient and generate remarks" %}
+  {% include "_patient_form.html" %}
+</form>
+</div></div>
+{% endblock %}
